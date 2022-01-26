@@ -1,8 +1,8 @@
-package com.cosmos.valuationservice.dao;
+package com.cosmos.valuationservice.mapper;
 
 import com.cosmos.valuationservice.entity.OrderRuleMirror;
 
-public interface OrderRuleMirrorDao {
+public interface OrderRuleMirrorMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(OrderRuleMirror record);
@@ -14,4 +14,6 @@ public interface OrderRuleMirrorDao {
     int updateByPrimaryKeySelective(OrderRuleMirror record);
 
     int updateByPrimaryKey(OrderRuleMirror record);
+
+    OrderRuleMirror selectByOrderId(Integer orderId);
 }

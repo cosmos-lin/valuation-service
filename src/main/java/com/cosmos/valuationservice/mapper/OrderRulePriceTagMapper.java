@@ -1,8 +1,8 @@
-package com.cosmos.valuationservice.dao;
+package com.cosmos.valuationservice.mapper;
 
 import com.cosmos.valuationservice.entity.OrderRulePriceTag;
 
-public interface OrderRulePriceTagDao {
+public interface OrderRulePriceTagMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(OrderRulePriceTag record);

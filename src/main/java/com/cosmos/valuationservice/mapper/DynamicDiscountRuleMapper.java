@@ -1,8 +1,9 @@
-package com.cosmos.valuationservice.dao;
+package com.cosmos.valuationservice.mapper;
 
 import com.cosmos.valuationservice.entity.DynamicDiscountRule;
 
-public interface DynamicDiscountRuleDao {
+public interface DynamicDiscountRuleMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(DynamicDiscountRule record);

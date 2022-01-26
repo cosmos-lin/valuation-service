@@ -1,17 +1,25 @@
 package com.cosmos.valuationservice.dao;
 
 import com.cosmos.valuationservice.entity.Order;
+import com.cosmos.valuationservice.mapper.OrderMapper;
+import lombok.AllArgsConstructor;
+import lombok.NonNull;
+import org.springframework.stereotype.Repository;
 
-public interface OrderDao {
-    int deleteByPrimaryKey(Integer id);
+@Repository
+@AllArgsConstructor
+public class OrderDao {
 
-    int insert(Order record);
+    @NonNull
+    private OrderMapper orderMapper;
 
-    int insertSelective(Order record);
+    /**
+     *  根据订单id 查询订单
+     * @param orderId 订单id
+     * @return 订单
+     */
+    public Order selectByOrderId(Integer orderId) {
 
-    Order selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Order record);
-
-    int updateByPrimaryKey(Order record);
+        return orderMapper.selectByPrimaryKey(orderId);
+    }
 }
